@@ -8,8 +8,6 @@ module.exports = {
         'standard-with-typescript',
         'plugin:i18next/recommended'
     ],
-    overrides: [
-    ],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -30,6 +28,15 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/naming-convention': 'off',
         'react/button-has-type': 'warn',
-        'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: ['fallback'] }]
-    }
+        'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: ['fallback'] }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }]
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ]
 }
