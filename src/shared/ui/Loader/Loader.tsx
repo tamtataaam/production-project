@@ -1,6 +1,6 @@
-import './Loader.css'
+import './Loader.css';
 
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames';
 
 interface LoaderProps {
     className?: string
@@ -14,7 +14,7 @@ const Loader = ({ className }: LoaderProps) => {
             <div />
             <div />
         </div>
-    )
-}
+    );
+};
 
-export default Loader
+export default Loader;

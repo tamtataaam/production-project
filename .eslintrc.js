@@ -5,8 +5,8 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        'standard-with-typescript',
-        'plugin:i18next/recommended'
+        'standard-with-typescript', 'plugin:i18next/recommended',
+        'plugin:storybook/recommended'
     ],
     parserOptions: {
         ecmaVersion: 'latest',
@@ -29,7 +29,9 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         'react/button-has-type': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: ['fallback'] }],
-        'max-len': ['error', { ignoreComments: true, code: 100 }]
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        semi: ['error', 'always'],
+        '@typescript-eslint/semi': 'off'
     },
     overrides: [
         {
@@ -39,4 +41,4 @@ module.exports = {
             }
         }
     ]
-}
+};

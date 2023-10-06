@@ -1,9 +1,4 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
-const path = require('path')
+const path = require('path');
 
 module.exports = {
     clearMocks: true,
@@ -34,4 +29,4 @@ module.exports = {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
     }
-}
+};
